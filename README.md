@@ -18,6 +18,11 @@ pip install -r requirements.txt
   * application id
   * prefix for bot commands
 
+P.S. if you want to ignore changes in config.py by git, run following command:
+```commandline
+git update-index --assume-unchanged config.py
+```
+
 ## Local start
 
 - Activate venv by following command (replace ```venv``` with venv directory):
