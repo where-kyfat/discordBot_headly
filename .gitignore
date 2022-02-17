@@ -1,1 +1,4 @@
+# Ignore ide settings
 .idea
+# Ignore database files
+/db

@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres
+    networks:
+      - bot_network
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    ports:
+      - "8001:5432"
+  bot:
+    build: .
+    command: python main.py
+    volumes:
+      - .:/bot
+    depends_on:
+      - db
+
+networks:
+  bot_network:
+    driver: bridge
