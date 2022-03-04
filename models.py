@@ -13,16 +13,3 @@ db = pw.PostgresqlDatabase(
 class BaseModel(pw.Model):
     class Meta:
         database = db
-
-
-class Messages(BaseModel):
-    id = pw.PrimaryKeyField(null=False)
-    message = pw.CharField(max_length=100)
-    user = pw.CharField(max_length=100)
-    #dis_id = pw.IntegerField(default=123)
-    dis_id_str = pw.CharField(max_length=100)
-
-    created_at = pw.DateTimeField(default=pw.datetime.datetime.now())
-    updated_at = pw.DateTimeField(default=pw.datetime.datetime.now())
-
-

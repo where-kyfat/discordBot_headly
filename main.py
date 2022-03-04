@@ -16,7 +16,7 @@ async def hello(ctx):
 async def on_message(message):
     await bot.process_commands(message)
 
-    if message.mentions != []:
+    if message.mentions:
         await message.delete(delay=10)
 
 bot.run(settings['token'])
