@@ -17,9 +17,17 @@ services:
     build: .
     networks:
       - bot_network
+    environment:
+      - DB_POSTGRES=postgres
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_HOST=db
+      - DB_PORT=5432
     command: python main.py
     volumes:
-      - .:/bot
+      - ./main.py:/bot/main.py
+      - ./apps:/bot/apps
+      - ./configs:/bot/configs
     depends_on:
       - db
 
