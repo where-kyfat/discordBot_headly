@@ -27,7 +27,7 @@ P.S. if you want to ignore changes in `configs/bot_token.json` by git, run follo
 git update-index --assume-unchanged configs/bot_token.json
 ```
 - Build docker images:
-```commandline 
+```commandline
 docker-compose build
 ```
 
