@@ -1,8 +1,10 @@
-# Discord HELLO bot
+# Discord bot
 
 ---
 
 **_Discord bot which responds: "hello, @some_user", to the user who calls it_**
+
+**_Also implements logic of remove summoning messages_**
 
 ## Local install 
 
@@ -14,18 +16,18 @@
 ```commandline
 pip install -r requirements.txt
 ```
-- Open `config.py` and write down [bot token information](https://discord.com/developers/applications):
+- Open `configs/bot_token.json` and write down [bot token information](https://discord.com/developers/applications):
   * token
   * bot name
   * application id
   * prefix for bot commands
 
-P.S. if you want to ignore changes in config.py by git, run following command:
+P.S. if you want to ignore changes in `configs/bot_token.json` by git, run following command:
 ```commandline
-git update-index --assume-unchanged config.py
+git update-index --assume-unchanged configs/bot_token.json
 ```
 - Build docker images:
-```commandline 
+```commandline
 docker-compose build
 ```
 
