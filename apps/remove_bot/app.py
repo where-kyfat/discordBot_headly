@@ -1,11 +1,14 @@
 """Remove_bot logic
 
-Implements logic of remove summoning messages
+Implements logic of removing messages with mention
 For now it removes messages after 10 sec
+Also it removes messages elder 24 hours
+To remove old messages send "$delete_old_mes" to discord chat
 
 """
 
 from configs.config import BOT_INSTANCE
+from datetime import datetime, timedelta
 
 
 @BOT_INSTANCE.event
@@ -15,3 +18,15 @@ async def on_message(message):
 
     if message.mentions:
         await message.delete(delay=10)
+
+
+@BOT_INSTANCE.command()
+async def delete_old_mes(ctx):
+    """Remove messages with mention elder 24 hours and send their number in a chat"""
+    await ctx.send('Delete starting')
+    c = 0
+    async for message in ctx.channel.history(limit=None):
+        if message.mentions and (message.created_at < datetime.now() - timedelta(hours=24)):
+            await message.delete()
+            c += 1
+    await ctx.send(f'Delete ended! Deleted {c} messages')
