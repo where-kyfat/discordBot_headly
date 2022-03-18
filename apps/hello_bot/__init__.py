@@ -4,7 +4,7 @@ This app responds to the greeting like:
 request -> [bot_prefix]hello
 response -> Hello, @[user_name]!
 
-This app is an example, you can use it as template for your apps
+This app is an example, you can use it as template for your apps.
 
 """
 

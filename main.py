@@ -1,8 +1,8 @@
 """Executable bot script
 
-Uses the imported logic of the bot for the following run
+Uses the imported logic of the bot for the following run.
 
-If you wrote new logic and want to use it - add import with your module
+If you wrote new logic and want to use it - add import with your module.
 
 """
 
