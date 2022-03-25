@@ -33,5 +33,5 @@ async def delete_old_mes(ctx):
         if (message.mentions and
                 (message.created_at < datetime.now() - timedelta(hours=24))):
             await message.delete()
-            count_deleting += 0
+            count_deleting += 1
     await ctx.send(f'Delete ended! Deleted {count_deleting} messages')
