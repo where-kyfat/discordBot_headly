@@ -1,11 +1,12 @@
 """Bot configuration file
 
-Add any common settings to this file
+Add any common settings to this file.
 
 """
 
 import json
 import os
+
 from discord.ext import commands
 
 

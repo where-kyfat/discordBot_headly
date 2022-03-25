@@ -1,7 +1,9 @@
-"""Remove summoning messages from chat
+"""Remove messages with mention from chat
 
-This app implements logic of removing summoning messages
-For now it removes messages after 10 sec
+This app implements logic of removing messages with mention,
+For now it removes messages after 10 sec,
+Also it removes messages with mention elder 24 hours.
+To remove these messages send "$delete_old_mes" to discord chat.
 
 """
 

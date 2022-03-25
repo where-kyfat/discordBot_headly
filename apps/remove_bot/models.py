@@ -5,6 +5,7 @@ Contains db models information
 """
 
 import peewee as pw
+
 from configs.config import DB
 
 
