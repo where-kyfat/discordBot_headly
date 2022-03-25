@@ -2,7 +2,7 @@
 
 Implements logic of removing messages with mention,
 For now it removes messages after 10 sec,
-Also it removes messages with messages elder 24 hours.
+Also it removes messages with mentions elder 24 hours.
 To remove these messages send "$delete_old_mes" to discord chat.
 
 """
@@ -33,5 +33,5 @@ async def delete_old_mes(ctx):
         if (message.mentions and
                 (message.created_at < datetime.now() - timedelta(hours=24))):
             await message.delete()
-            count_deleting = 0
+            count_deleting += 0
     await ctx.send(f'Delete ended! Deleted {count_deleting} messages')
